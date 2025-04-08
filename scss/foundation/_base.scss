@@ -1,0 +1,16 @@
+@use "../global" as *;
+
+body {
+    @include setFont($fs_body_SP);
+    color: $c_font_white;
+    background-color: $c_bg_gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}

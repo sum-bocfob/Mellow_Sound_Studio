@@ -1,0 +1,125 @@
+$breakpoints: (
+    "tab": "425px",
+    "pc": "768px",
+);
+
+@mixin media($breakpoint: "pc") {
+    @media screen and (width > #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+@function rem($fontSize) {
+    @return calc($fontSize / 16 * 1rem);
+}
+
+// フォントスタイルのキー
+$fs_body_SP: "body_SP";
+$fs_body_SP_lh100per: "body_SP_lh100per";
+$fs_body_PC: "body_PC";
+$fs_body_PC_lh100per: "body_PC_lh100per";
+$fs_heading_sm_SP: "heading_sm_SP";
+$fs_heading_sm_PC: "heading_sm_PC";
+$fs_strong: "strong";
+$fs_section_title_SP: "section_title_SP";
+$fs_section_title_PC: "section_title_PC";
+$fs_section_ja_SP: "section_ja_SP";
+$fs_section_ja_PC: "section_ja_PC";
+$fs_heading_lg: "heading_lg";
+$fs_small: "small";
+
+$fontStyles: (
+    #{$fs_body_SP}: (
+            "size": rem(14),
+            "line-height": 1.5,
+            "weight": normal,
+            "family": "Noto Sans JP",
+        ),
+    #{$fs_body_SP_lh100per}: (
+            "line-height": 1,
+        ),
+    #{$fs_body_PC}: (
+            "size": rem(16),
+        ),
+    #{$fs_body_PC_lh100per}: (
+            "size": rem(16),
+            "line-height": 1,
+        ),
+    #{$fs_heading_sm_SP}: (
+            "line-height": 1,
+            "weight": bold,
+        ),
+    #{$fs_heading_sm_PC}: (
+            "size": rem(24),
+            "line-height": 1,
+            "weight": bold,
+        ),
+    #{$fs_strong}: (
+            "size": rem(48),
+            "line-height": 1,
+            "weight": bold,
+            "family": "Karantina",
+        ),
+    #{$fs_section_title_SP}: (
+            "size": rem(48),
+            "line-height": 1,
+            "weight": bold,
+            "family": "Karantina",
+            "lts": 0.05em,
+        ),
+    #{$fs_section_title_PC}: (
+            "size": rem(56),
+            "line-height": 1,
+            "weight": bold,
+            "family": "Karantina",
+            "lts": 0.05em,
+        ),
+    #{$fs_section_ja_SP}: (
+            "size": rem(24),
+            "line-height": 1,
+        ),
+    #{$fs_section_ja_PC}: (
+            "size": rem(16),
+            "line-height": 1,
+        ),
+    #{$fs_heading_lg}: (
+            "size": rem(24),
+            "line-height": 1,
+            "weight": bold,
+        ),
+    #{$fs_small}: (
+            "size": rem(12),
+            "line-height": 1,
+        )
+);
+
+// *フォントを変数にしたキーから設定
+@mixin setFont($fs) {
+    @if map-has-key(map-get($map: $fontStyles, $key: $fs), "size") {
+        font-size: map-get($map: map-get($map: $fontStyles, $key: $fs), $key: "size");
+    }
+
+    @if map-has-key(map-get($map: $fontStyles, $key: $fs), "line-height") {
+        line-height: map-get($map: map-get($map: $fontStyles, $key: $fs), $key: "line-height");
+    }
+
+    @if map-has-key(map-get($map: $fontStyles, $key: $fs), "weight") {
+        font-weight: map-get($map: map-get($map: $fontStyles, $key: $fs), $key: "weight");
+    }
+
+    @if map-has-key(map-get($map: $fontStyles, $key: $fs), "family") {
+        font-family: "#{map-get($map: map-get($map: $fontStyles, $key: $fs), $key: "family")}", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    }
+
+    @if map-has-key(map-get($map: $fontStyles, $key: $fs), "lts") {
+        letter-spacing: map-get($map: map-get($map: $fontStyles, $key: $fs), $key: "lts");
+    }
+}
+
+// *エフェクト
+// ニューモーフィズム
+$c_neumorphism_dark: #151515;
+$c_neumorphism_light: #6a6b6e;
+@mixin neumorphism {
+    box-shadow: 4px 4px 4px $c_neumorphism_dark, -4px -4px 4px $c_neumorphism_light;
+}
