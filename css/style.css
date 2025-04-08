@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -390,4 +391,107 @@ a {
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+.l-header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  /*  ==============================
+  * ハンバーガーメニュー
+  ============================== */
+  /*  ==============================
+  * グローバルナビ
+  ============================== */
+}
+.l-header__logo {
+  width: 160px;
+}
+.l-header__hamburger {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  z-index: 1500;
+}
+.l-header__hamburger.js-open span:nth-child(1) {
+  translate: -50% 8px;
+  rotate: -25deg;
+}
+.l-header__hamburger.js-open span:nth-child(2) {
+  opacity: 0;
+}
+.l-header__hamburger.js-open span:nth-child(3) {
+  translate: -50% 8px;
+  rotate: 25deg;
+}
+.l-header__hamburger span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  translate: -50% 0;
+  width: 32px;
+  height: 1px;
+  background-color: #f4f4f4;
+  display: block;
+  transform-origin: 50% 50%;
+  transition-duration: 0.3s;
+}
+.l-header__hamburger span:nth-child(2) {
+  translate: -50% 8px;
+}
+.l-header__hamburger span:nth-child(3) {
+  translate: -50% 16px;
+}
+.l-header__gnav {
+  position: fixed;
+  width: 66.6666666667vw;
+  height: 100vh;
+  right: -100%;
+  top: 0;
+  background-color: #212121;
+  padding: 0 16px;
+  z-index: 1000;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.l-header__gnav.js-open {
+  box-shadow: 0 0 8px 16px #212121;
+  right: 0;
+}
+.l-header__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.l-header__item {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Karantina", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  letter-spacing: 0.05em;
+  width: 100%;
+}
+.l-header__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.l-header__item span {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.u-upper-case {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
