@@ -2,6 +2,21 @@
 
 .top {
     .p-about {
+        .l-containerL {
+            display: flex;
+            flex-direction: column;
+            @include media {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                gap: 100px;
+            }
+        }
+        &__inner {
+            @include media {
+                width: 37.5%;
+            }
+        }
+
         &__text {
             margin-top: 24px;
         }

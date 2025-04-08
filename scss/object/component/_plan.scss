@@ -1,0 +1,67 @@
+@use "../../global" as *;
+
+.c-plan {
+    border-radius: 4px;
+    @include neumorphism;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 343px;
+
+    &__title {
+        @include setFont($fs_heading_lg);
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 16px;
+            background-color: $c_accent;
+            position: absolute;
+            bottom: -8px;
+            z-index: -1;
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+    }
+
+    &__menu-item {
+        width: 100%;
+    }
+
+    &__menu-title {
+        @include setFont($fs_heading_sm_SP);
+        @include neumorphism;
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        &--hour::before,
+        &--night::before {
+            font-family: "Material Icons Outlined";
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        &--hour::before {
+            content: "\e855";
+        }
+        &--night::before {
+            content: "\e51c";
+        }
+    }
+}

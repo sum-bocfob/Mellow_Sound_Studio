@@ -1,12 +1,16 @@
 @use "../../global" as *;
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 .c-swiper {
     &-wrapper {
         position: relative;
         margin-top: 24px;
-        width: 100%;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
         aspect-ratio: 375/200;
+        @include media {
+            margin: 0;
+            width: 53.57142857142858%;
+        }
     }
 
     &__caption {
@@ -16,6 +20,9 @@
         translate: -50% calc(100% + 8px);
         color: $c_font_white;
         @include setFont($fs_heading_sm_SP);
+        @include media {
+            @include setFont($fs_heading_sm_PC);
+        }
     }
 
     &__adjustBottom {

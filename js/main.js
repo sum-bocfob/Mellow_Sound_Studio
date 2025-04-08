@@ -6,6 +6,14 @@ $(function () {
         $(this).toggleClass("js-open");
         gnav.toggleClass("js-open");
     });
+
+    // *アコーディオン
+    const accordion_title = $(".c-accordion__title");
+    accordion_title.not(".js-accordion-open").next(".c-item-list").hide();
+    accordion_title.on("click", function () {
+        $(this).toggleClass("js-accordion-open");
+        $(this).next(".c-item-list").slideToggle();
+    });
 });
 
 // *Swiper

@@ -10,9 +10,19 @@
 
     &__title {
         @include setFont($fs_section_title_SP);
+        @include media {
+            @include setFont($fs_section_title_PC);
+        }
     }
 
     &__sub {
         @include setFont($fs_section_ja_SP);
+        @include media {
+            @include setFont($fs_section_ja_PC);
+        }
+    }
+
+    &--align-right {
+        justify-content: flex-end;
     }
 }

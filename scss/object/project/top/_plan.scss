@@ -1,0 +1,122 @@
+@use "../../../global" as *;
+
+.top {
+    .p-plan {
+        &__plan-list {
+            padding: 32px 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            row-gap: 32px;
+            column-gap: min(4vw, 40px);
+            flex-wrap: wrap;
+            @include media {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .p-basic-price {
+        display: grid;
+        grid-template-columns: 56% 44%;
+        padding: 16px 0 0;
+
+        &__title,
+        &__price {
+            text-align: center;
+            padding: 8px 0;
+
+            &:first-of-type {
+                border-bottom: 1px solid $c_line_gray;
+            }
+        }
+    }
+
+    .p-secondary-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 0 0;
+        gap: 8px;
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::after {
+                content: "\ead0";
+                font-family: "Material Icons";
+                display: block;
+                font-size: 2rem;
+                color: $c_line_gray;
+            }
+        }
+
+        &__accent1 {
+            @include setFont($fs_strong);
+            position: relative;
+
+            &--with-note::after {
+                content: attr(data-note);
+                font-size: 0.75rem;
+                font-weight: normal;
+                font-family: "Noto Sans JP";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                translate: calc(100% + 8px);
+            }
+        }
+
+        &__accent2 {
+            @include setFont($fs_strong);
+            font-size: 2rem;
+        }
+    }
+
+    .p-tertiary-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 0 0;
+        @include setFont($fs_heading_sm_SP);
+    }
+
+    .p-student-discount {
+        max-width: 418px;
+        border-top: 1px solid $c_font_white;
+        border-bottom: 1px solid $c_font_white;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 auto;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 16px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-left: 1px solid $c_font_white;
+            border-right: 1px solid $c_font_white;
+        }
+        &::after {
+            top: auto;
+            bottom: 0;
+        }
+
+        &__title {
+            @include setFont($fs_heading_lg);
+            text-align: center;
+        }
+
+        &__lead {
+            text-align: center;
+        }
+    }
+}

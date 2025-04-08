@@ -1,4 +1,6 @@
 @use "../global" as *;
+@import "https://fonts.googleapis.com/css2?family=Material+Icons+Outlined";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 body {
     @include setFont($fs_body_SP);
@@ -14,4 +16,8 @@ a {
 img {
     max-width: 100%;
     vertical-align: bottom;
+}
+
+dt {
+    font-weight: normal;
 }
