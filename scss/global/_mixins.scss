@@ -1,6 +1,7 @@
 $breakpoints: (
     "tab": "425px",
     "pc": "768px",
+    "pcL": "1024px",
 );
 
 @mixin media($breakpoint: "pc") {

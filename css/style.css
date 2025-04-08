@@ -397,6 +397,7 @@ img {
   padding: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   width: 100%;
   z-index: 500;
@@ -407,8 +408,19 @@ img {
   * グローバルナビ
   ============================== */
 }
+@media screen and (width > 1024px) {
+  .l-header {
+    padding: 32px;
+  }
+}
 .l-header__logo {
   width: 160px;
+}
+@media screen and (width > 1024px) {
+  .l-header__logo {
+    width: 180px;
+    flex-shrink: 0;
+  }
 }
 .l-header__hamburger {
   position: fixed;
@@ -417,6 +429,11 @@ img {
   width: 32px;
   height: 32px;
   z-index: 1500;
+}
+@media screen and (width > 1024px) {
+  .l-header__hamburger {
+    display: none;
+  }
 }
 .l-header__hamburger.js-open span:nth-child(1) {
   translate: -50% 8px;
@@ -459,6 +476,14 @@ img {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
+@media screen and (width > 1024px) {
+  .l-header__gnav {
+    width: 100%;
+    height: auto;
+    position: static;
+    background: none;
+  }
+}
 .l-header__gnav.js-open {
   box-shadow: 0 0 8px 16px #212121;
   right: 0;
@@ -470,7 +495,15 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  row-gap: 32px;
+}
+@media screen and (width > 1024px) {
+  .l-header__list {
+    flex-direction: row;
+    justify-content: flex-end;
+    -moz-column-gap: 4.4444444444vw;
+         column-gap: 4.4444444444vw;
+  }
 }
 .l-header__item {
   font-size: 3rem;
@@ -478,7 +511,15 @@ img {
   font-weight: bold;
   font-family: "Karantina", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   letter-spacing: 0.05em;
-  width: 100%;
+}
+@media screen and (width > 768px) {
+  .l-header__item {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: bold;
+    font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    flex-shrink: 0;
+  }
 }
 .l-header__item a {
   display: flex;
@@ -486,10 +527,21 @@ img {
   align-items: center;
   width: 100%;
 }
+@media screen and (width > 1024px) {
+  .l-header__item a {
+    gap: 8px;
+  }
+}
 .l-header__item span {
   font-size: 0.75rem;
   line-height: 1;
   font-weight: normal;
+}
+@media screen and (width > 768px) {
+  .l-header__item span {
+    font-size: 1rem;
+    line-height: 1;
+  }
 }
 
 .u-upper-case {

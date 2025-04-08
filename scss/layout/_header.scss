@@ -4,12 +4,21 @@
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     z-index: 500;
 
+    @include media("pcL") {
+        padding: 32px;
+    }
+
     &__logo {
         width: 160px;
+        @include media("pcL") {
+            width: 180px;
+            flex-shrink: 0;
+        }
     }
 
     /*  ==============================
@@ -22,6 +31,10 @@
         width: 32px;
         height: 32px;
         z-index: 1500;
+
+        @include media("pcL") {
+            display: none;
+        }
 
         &.js-open {
             span {
@@ -75,6 +88,13 @@
         transition-duration: $dur_def;
         transition-timing-function: ease-out;
 
+        @include media("pcL") {
+            width: 100%;
+            height: auto;
+            position: static;
+            background: none;
+        }
+
         &.js-open {
             box-shadow: 0 0 8px 16px #212121;
             right: 0;
@@ -88,23 +108,42 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 32px;
+        row-gap: 32px;
+
+        @include media("pcL") {
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: 4.444444444444445vw;
+        }
     }
 
     &__item {
         @include setFont($fs_section_title_SP);
-        width: 100%;
+
+        @include media {
+            @include setFont($fs_body_PC_lh100per);
+            font-weight: bold;
+            font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            flex-shrink: 0;
+        }
 
         a {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
+            @include media("pcL") {
+                gap: 8px;
+            }
         }
 
         span {
             @include setFont($fs_small);
             font-weight: normal;
+
+            @include media {
+                @include setFont($fs_body_PC_lh100per);
+            }
         }
     }
 }
