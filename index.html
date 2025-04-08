@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mellow Sound Studio | トップページ</title>
+        <!-- サイト説明文 -->
+        <meta name="description" content="音楽スタジオ・レコーディングスタジオ「Mellow Sound Studio」。初心者〜プロの方まで幅広いお客様にご利用いただけます。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,address=no" />
+        <!-- 本サイトのURL(絶対パス)を記載(分散ページのSEO対策) -->
+        <link rel="canonical" href="#" />
+        <!-- ファビコン -->
+        <link rel="icon" href="#" sizes="32x32" />
+        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml" /> -->
+        <link rel="apple-touch-icon" href="#" />
+
+        <!-- OGP -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="#" />
+        <meta property="og:title" content="Mellow Sound Studio | トップページ" />
+        <meta property="og:description" content="音楽スタジオ・レコーディングスタジオ「Mellow Sound Studio」。初心者〜プロの方まで幅広いお客様にご利用いただけます。" />
+        <meta property="og:site_name" content="Mellow Sound Studio" />
+        <!-- <meta property="og:image" content="img/ogp.jpg" /> -->
+        <meta property="og:locale" content="ja_JP" />
+
+        <!-- Import Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=M+PLUS+1:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Import JS/jQuery Library -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body class="top">
+        <!-- *ヘッダー================== -->
+        <header class="l-header">
+            <h1 class="l-header__logo">
+                <a href="#" class="l-header__link"><img src="./img/Logo.svg" alt="Mellow Sound Studio ロゴテキスト" class="l-header__logo-img" /></a>
+            </h1>
+
+            <!-- * ハンバーガーメニュー ======================== -->
+            <button type="button" class="l-header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="l-header__gnav">
+                <ul class="l-header__list">
+                    <li class="l-header__item">
+                        <a href="#about" class="u-upper-case">About<span>当スタジオについて</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="#equipments" class="u-upper-case">Equipments<span>機材一覧</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="#plan" class="u-upper-case">Plan<span>料金プラン</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="#access" class="u-upper-case">Access<span>アクセス</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="./booking.html" class="u-upper-case">Booking<span>予約</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!-- * ヒーロー ======================== -->
+            <div class="p-hero">
+                <div class="p-hero__texts">
+                    <p class="p-hero__lead">音が、自由になる場所。</p>
+                    <h2 class="p-hero__title">Mellow <span class="u-block-onlySP">Sound</span> <span class="u-block-onlySP">Studio</span></h2>
+                </div>
+            </div>
+            <!-- /.p-hero -->
+
+            <!-- * ABOUT ======================== -->
+            <section class="section p-about">
+                <div class="l-containerL">
+                    <hgroup class="c-headingL">
+                        <h2 class="c-headingL__title u-upper-case">About</h2>
+                        <p class="c-headingL__sub">当スタジオについて</p>
+                    </hgroup>
+                    <p class="p-about__text">
+                        Mellow Sound Studioは、初心者〜プロの方まで幅広いお客様にご利用いただけるMellow Sound Studioは、初心者〜プロの方まで幅広いお客様にご利用いただけるMellow Sound Studioは、初心者〜プロの方まで幅広いお客様にご利用いただける。
+                    </p>
+                </div>
+
+                <!-- *Swiper Slider main container -->
+                <div class="c-swiper-wrapper">
+                    <div class="swiper c-swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide" data-caption="StudioA"><img src="./img/studio.jpg" alt="" /></div>
+                            <div class="swiper-slide" data-caption="StudioB"><img src="./img/studio02.jpg" alt="" /></div>
+                            <div class="swiper-slide" data-caption="StudioC"><img src="./img/studio03.jpg" alt="" /></div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <span class="c-swiper__caption">StudioA</span>
+                </div>
+                <!-- /.c-swiper-wrapper -->
+                <div class="c-swiper__adjustBottom"></div>
+            </section>
+        </main>
+
+        <!-- *フッター================== -->
+        <footer class="footer"></footer>
+
+        <!-- Import JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

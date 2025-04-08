@@ -1,0 +1,9 @@
+@use "../../../global" as *;
+
+.top {
+    .p-about {
+        &__text {
+            margin-top: 24px;
+        }
+    }
+}

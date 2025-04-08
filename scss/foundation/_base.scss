@@ -2,6 +2,7 @@
 
 body {
     @include setFont($fs_body_SP);
+    font-feature-settings: "palt";
     color: $c_font_white;
     background-color: $c_bg_gray;
 }
