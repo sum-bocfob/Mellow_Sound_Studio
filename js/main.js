@@ -1,9 +1,18 @@
-document.querySelectorAll(".c-accordion__scroll").forEach((item) => {
-    new ScrollBooster({
-        viewport: item,
-        scrollMode: "transform",
-        direction: "horizontal",
+// scrollBoost
+if (window.matchMedia("(width > 768px)").matches) {
+    document.querySelectorAll(".c-accordion__scroll").forEach((item) => {
+        new ScrollBooster({
+            viewport: item,
+            scrollMode: "transform",
+            direction: "horizontal",
+        });
     });
+}
+
+// Splitting
+const targets = document.querySelectorAll(".split-target");
+targets.forEach((target) => {
+    Splitting({ target: target });
 });
 
 $(function () {

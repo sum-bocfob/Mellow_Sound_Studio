@@ -27,6 +27,12 @@
         align-items: center;
         gap: 32px;
 
+        @include media {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
         &__item {
             width: 100%;
         }
@@ -42,6 +48,15 @@
 
         &__text {
             margin-top: 8px;
+            @include media {
+                margin-top: 16px;
+            }
+
+            &--PCCenter {
+                @include media {
+                    text-align: center;
+                }
+            }
         }
     }
 }

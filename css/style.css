@@ -1,6 +1,17 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Material+Icons+Outlined";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@keyframes hopChar {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -0.5em;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -418,7 +429,8 @@ dt {
 }
 @media screen and (width > 1024px) {
   .l-header {
-    padding: 32px;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 .l-header__logo {
@@ -496,6 +508,15 @@ dt {
   box-shadow: 0 0 8px 16px #212121;
   right: 0;
 }
+.l-header__gnav.js-open .split-target .char {
+  animation: hopChar 0.2s;
+  animation-delay: calc(0.2s / var(--char-total) * var(--char-index) + 0.2s);
+}
+@media screen and (width > 768px) {
+  .l-header__gnav.js-open .split-target .char {
+    animation: none;
+  }
+}
 .l-header__list {
   width: 100%;
   height: 100%;
@@ -529,6 +550,12 @@ dt {
     flex-shrink: 0;
   }
 }
+@media screen and (width > 768px) {
+  .l-header__item:hover .split-target .char {
+    animation: hopChar 0.2s;
+    animation-delay: calc(0.2s / var(--char-total) * var(--char-index));
+  }
+}
 .l-header__item a {
   display: flex;
   flex-direction: column;
@@ -540,13 +567,13 @@ dt {
     gap: 8px;
   }
 }
-.l-header__item span {
+.l-header__item-ja {
   font-size: 0.75rem;
   line-height: 1;
   font-weight: normal;
 }
 @media screen and (width > 768px) {
-  .l-header__item span {
+  .l-header__item-ja {
     font-size: 1rem;
     line-height: 1;
   }
@@ -1084,6 +1111,13 @@ dt {
   align-items: center;
   gap: 32px;
 }
+@media screen and (width > 768px) {
+  .top .p-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
 .top .p-info__item {
   width: 100%;
 }
@@ -1097,6 +1131,16 @@ dt {
 }
 .top .p-info__text {
   margin-top: 8px;
+}
+@media screen and (width > 768px) {
+  .top .p-info__text {
+    margin-top: 16px;
+  }
+}
+@media screen and (width > 768px) {
+  .top .p-info__text--PCCenter {
+    text-align: center;
+  }
 }
 
 .u-upper-case {

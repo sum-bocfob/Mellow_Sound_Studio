@@ -9,17 +9,20 @@ Todo:
   ☐ favicon
 
   layout:
-    ☐ header 背景ぼかし
-    ☐ footer
-    ☐ container pad16 max1120
-    ☐ id
+    ✔ header 背景ぼかし @done(25-04-09 14:29)
+    ✔ footer @done(25-04-09 14:29)
+    ✔ container pad16 max1120 @done(25-04-09 14:29)
+    ✔ id @done(25-04-09 14:29)
+    ☐ スムーズスクロール
+    ☐ gnav閉じる
+    ☐ 予約ページ
 
   project:
 
   component:
-    ☐ 料金プラン PC
-    ☐ ボタン
-    ☐ 機材一覧のアイテム
-    ☐ 機材一覧のリスト
+    ✔ 料金プラン PC @done(25-04-09 14:29)
+    ✔ ボタン @done(25-04-09 14:29)
+    ✔ 機材一覧のアイテム @done(25-04-09 14:29)
+    ✔ 機材一覧のリスト @done(25-04-09 14:29)
 
 

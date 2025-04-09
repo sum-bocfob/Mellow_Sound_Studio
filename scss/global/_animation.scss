@@ -1,0 +1,11 @@
+@keyframes hopChar {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -0.5em;
+    }
+    100% {
+        translate: 0 0;
+    }
+}

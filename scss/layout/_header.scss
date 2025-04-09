@@ -10,7 +10,8 @@
     z-index: 500;
 
     @include media("pcL") {
-        padding: 32px;
+        padding: 24px;
+        background-color: rgb(0, 0, 0, 0.2);
     }
 
     &__logo {
@@ -98,6 +99,15 @@
         &.js-open {
             box-shadow: 0 0 8px 16px #212121;
             right: 0;
+
+            .split-target .char {
+                $anim_dur: 0.2s;
+                animation: hopChar $anim_dur;
+                animation-delay: calc($anim_dur / var(--char-total) * var(--char-index) + 0.2s);
+                @include media {
+                    animation: none;
+                }
+            }
         }
     }
 
@@ -127,6 +137,16 @@
             flex-shrink: 0;
         }
 
+        &:hover {
+            @include media {
+                .split-target .char {
+                    $anim_dur: 0.2s;
+                    animation: hopChar $anim_dur;
+                    animation-delay: calc($anim_dur / var(--char-total) * var(--char-index));
+                }
+            }
+        }
+
         a {
             display: flex;
             flex-direction: column;
@@ -137,7 +157,7 @@
             }
         }
 
-        span {
+        &-ja {
             @include setFont($fs_small);
             font-weight: normal;
 

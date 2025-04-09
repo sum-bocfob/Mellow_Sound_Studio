@@ -31,6 +31,7 @@
         <!-- Import CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="node_modules/splitting/dist/splitting.css" />
         <link rel="stylesheet" href="css/style.css" />
 
         <!-- Import JS/jQuery Library -->
@@ -53,19 +54,19 @@
             <nav class="l-header__gnav">
                 <ul class="l-header__list">
                     <li class="l-header__item">
-                        <a href="#about" class="u-upper-case">About<span>当スタジオについて</span></a>
+                        <a href="#about" class="u-upper-case"><span class="split-target">About</span><span class="l-header__item-ja">当スタジオについて</span></a>
                     </li>
                     <li class="l-header__item">
-                        <a href="#equipments" class="u-upper-case">Equipments<span>機材一覧</span></a>
+                        <a href="#equipments" class="u-upper-case"><span class="split-target">Equipments</span><span class="l-header__item-ja">機材一覧</span></a>
                     </li>
                     <li class="l-header__item">
-                        <a href="#plan" class="u-upper-case">Plan<span>料金プラン</span></a>
+                        <a href="#plan" class="u-upper-case"><span class="split-target">Plan</span><span class="l-header__item-ja">料金プラン</span></a>
                     </li>
                     <li class="l-header__item">
-                        <a href="#access" class="u-upper-case">Access<span>アクセス</span></a>
+                        <a href="#access" class="u-upper-case"><span class="split-target">Access</span><span class="l-header__item-ja">アクセス</span></a>
                     </li>
                     <li class="l-header__item">
-                        <a href="./booking.html" class="u-upper-case">Booking<span>予約</span></a>
+                        <a href="./booking.html" class="u-upper-case"><span class="split-target">Booking</span><span class="l-header__item-ja">予約</span></a>
                     </li>
                 </ul>
             </nav>
@@ -82,7 +83,7 @@
             <!-- /.p-hero -->
 
             <!-- * ABOUT ======================== -->
-            <section class="section p-about">
+            <section class="section p-about" id="about">
                 <div class="l-containerL">
                     <div class="p-about__inner">
                         <hgroup class="c-headingL">
@@ -118,7 +119,7 @@
             <!-- /.p-about -->
 
             <!-- *EQUIPMENTS -->
-            <section class="section p-equipments">
+            <section class="section p-equipments" id="equipments">
                 <div class="l-containerL">
                     <hgroup class="c-headingL c-headingL--align-right c-headingL--align-centerPC">
                         <h2 class="c-headingL__title u-upper-case">Equipments</h2>
@@ -288,7 +289,7 @@
             <!-- /.p-equipments -->
 
             <!-- *PLAN -->
-            <section class="section p-plan">
+            <section class="section p-plan" id="plan">
                 <div class="l-containerL">
                     <hgroup class="c-headingL">
                         <h2 class="c-headingL__title u-upper-case">Plan</h2>
@@ -396,7 +397,7 @@
             <!-- /.plan -->
 
             <!-- * ACCESS ======================== -->
-            <section class="section p-access">
+            <section class="section p-access" id="access">
                 <div class="l-containerL">
                     <hgroup class="c-headingL c-headingL--align-right">
                         <h2 class="c-headingL__title u-upper-case">Access</h2>
@@ -421,7 +422,7 @@
                     <dl class="p-info">
                         <div class="p-info__item">
                             <dt class="p-info__title">所在地</dt>
-                            <dd class="p-info__text">神奈川県横浜市金沢区西柴4<span class="u-adjust-char-pos">-</span>955<span class="u-adjust-char-pos">-</span>6</dd>
+                            <dd class="p-info__text p-info__text--PCCenter">神奈川県横浜市金沢区西柴4<span class="u-adjust-char-pos">-</span>955<span class="u-adjust-char-pos">-</span>6</dd>
                         </div>
                         <div class="p-info__item">
                             <dt class="p-info__title">営業時間</dt>
@@ -433,7 +434,7 @@
                         </div>
                         <div class="p-info__item">
                             <dt class="p-info__title">電話番号</dt>
-                            <dd class="p-info__text">0000<span class="u-adjust-char-pos">-</span>00<span class="u-adjust-char-pos">-</span>0000</dd>
+                            <dd class="p-info__text p-info__text--PCCenter">0000<span class="u-adjust-char-pos">-</span>00<span class="u-adjust-char-pos">-</span>0000</dd>
                         </div>
                     </dl>
 
@@ -449,8 +450,8 @@
 
         <!-- Import JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- <script src="node_modules/scrollbooster/dist/scrollbooster.min.js"></script> -->
-        <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+        <script src="node_modules/scrollbooster/dist/scrollbooster.min.js"></script>
+        <script src="node_modules/splitting/dist/splitting.min.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
