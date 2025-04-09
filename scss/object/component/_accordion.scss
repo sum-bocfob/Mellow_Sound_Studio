@@ -18,24 +18,49 @@
         align-items: center;
         cursor: pointer;
 
+        @include media {
+            @include setFont($fs_heading_sm_PC);
+            border: none;
+        }
+
         &::after {
             content: "\e145";
             font-family: "Material Icons";
             font-size: 1.5rem;
+
+            @include media {
+                content: "";
+            }
         }
 
         &.js-accordion-open::after {
             content: "\e15b";
+            @include media {
+                content: "";
+            }
         }
+    }
+
+    &__scroll {
+        overflow-x: hidden;
     }
 }
 
 .c-item-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 16px 0;
     row-gap: 16px;
+
+    @include media {
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     &__item {
         width: 46.647230320699705%;
@@ -44,6 +69,11 @@
         align-items: center;
         gap: 4px;
         text-align: center;
+
+        @include media {
+            width: 240px;
+            flex-shrink: 0;
+        }
     }
 
     &__img {

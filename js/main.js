@@ -1,3 +1,11 @@
+document.querySelectorAll(".c-accordion__scroll").forEach((item) => {
+    new ScrollBooster({
+        viewport: item,
+        scrollMode: "transform",
+        direction: "horizontal",
+    });
+});
+
 $(function () {
     // *ハンバーガーメニュー
     const hamburger = $(".l-header__hamburger");
@@ -9,11 +17,13 @@ $(function () {
 
     // *アコーディオン
     const accordion_title = $(".c-accordion__title");
-    accordion_title.not(".js-accordion-open").next(".c-item-list").hide();
-    accordion_title.on("click", function () {
-        $(this).toggleClass("js-accordion-open");
-        $(this).next(".c-item-list").slideToggle();
-    });
+    if (window.matchMedia("(width <= 768px)").matches) {
+        accordion_title.not(".js-accordion-open").next(".c-accordion__scroll").hide();
+        accordion_title.on("click", function () {
+            $(this).toggleClass("js-accordion-open");
+            $(this).next(".c-accordion__scroll").slideToggle();
+        });
+    }
 });
 
 // *Swiper

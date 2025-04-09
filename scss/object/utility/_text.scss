@@ -4,6 +4,10 @@
     text-transform: uppercase;
 }
 
+.u-block {
+    display: block;
+}
+
 .u-block-onlySP {
     display: block;
     @include media {

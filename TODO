@@ -2,6 +2,7 @@ FLOCSS
 Sass
 Swiper
 Splitting
+ScrollBooster
 
 
 Todo:
@@ -11,6 +12,7 @@ Todo:
     ☐ header 背景ぼかし
     ☐ footer
     ☐ container pad16 max1120
+    ☐ id
 
   project:
 

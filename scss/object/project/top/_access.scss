@@ -10,6 +10,10 @@
         aspect-ratio: 375/300;
         margin-top: 32px;
 
+        @include media {
+            aspect-ratio: 1440/500;
+        }
+
         iframe {
             width: 100%;
             height: 100%;

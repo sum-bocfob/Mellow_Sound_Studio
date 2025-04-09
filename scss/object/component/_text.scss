@@ -25,4 +25,10 @@
     &--align-right {
         justify-content: flex-end;
     }
+
+    &--align-centerPC {
+        @include media {
+            justify-content: center;
+        }
+    }
 }
