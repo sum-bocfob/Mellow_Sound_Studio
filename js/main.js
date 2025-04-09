@@ -33,6 +33,16 @@ $(function () {
             $(this).next(".c-accordion__scroll").slideToggle();
         });
     }
+
+    // ページ内リンク　スムーズスクロール
+    $('a[href^="#"]').on("click", function () {
+        let href = $(this).attr("href");
+        let target = $(href === "#" || href === "" ? "html" : href);
+        let pos = target.offset().top;
+        $("html, body").animate({
+            scrollTop: pos,
+        });
+    });
 });
 
 // *Swiper
