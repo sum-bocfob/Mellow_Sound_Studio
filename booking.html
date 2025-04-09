@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mellow Sound Studio | 予約</title>
+        <!-- サイト説明文 -->
+        <meta name="description" content="音楽スタジオ・レコーディングスタジオ「Mellow Sound Studio」の予約ページ。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,address=no" />
+        <!-- 本サイトのURL(絶対パス)を記載(分散ページのSEO対策) -->
+        <link rel="canonical" href="#" />
+        <!-- ファビコン -->
+        <link rel="icon" href="#" sizes="32x32" />
+        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml" /> -->
+        <link rel="apple-touch-icon" href="#" />
+
+        <!-- OGP -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="#" />
+        <meta property="og:title" content="Mellow Sound Studio | 予約" />
+        <meta property="og:description" content="音楽スタジオ・レコーディングスタジオ「Mellow Sound Studio」の予約ページ。" />
+        <meta property="og:site_name" content="Mellow Sound Studio" />
+        <!-- <meta property="og:image" content="img/ogp.jpg" /> -->
+        <meta property="og:locale" content="ja_JP" />
+
+        <!-- Import Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=M+PLUS+1:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
+        <link rel="stylesheet" href="node_modules/splitting/dist/splitting.css" />
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css" /> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/vader/jquery-ui.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Import JS/jQuery Library -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body class="booking">
+        <!-- *ヘッダー================== -->
+        <header class="l-header">
+            <h1 class="l-header__logo">
+                <a href="index.html" class="l-header__link"><img src="./img/Logo.svg" alt="Mellow Sound Studio ロゴテキスト" class="l-header__logo-img" /></a>
+            </h1>
+
+            <!-- * ハンバーガーメニュー ======================== -->
+            <button type="button" class="l-header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="l-header__gnav">
+                <ul class="l-header__list">
+                    <li class="l-header__item">
+                        <a href="index.html#about" class="u-upper-case"><span class="split-target">About</span><span class="l-header__item-ja">当スタジオについて</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="index.html#equipments" class="u-upper-case"><span class="split-target">Equipments</span><span class="l-header__item-ja">機材一覧</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="index.html#plan" class="u-upper-case"><span class="split-target">Plan</span><span class="l-header__item-ja">料金プラン</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="index.html#access" class="u-upper-case"><span class="split-target">Access</span><span class="l-header__item-ja">アクセス</span></a>
+                    </li>
+                    <li class="l-header__item">
+                        <a href="#" class="u-upper-case"><span class="split-target">Booking</span><span class="l-header__item-ja">予約</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="l-containerL">
+                <hgroup class="p-booking">
+                    <h2 class="p-booking__title u-upper-case">Booking</h2>
+                    <p class="p-booking__sub">予約</p>
+                </hgroup>
+                <!-- * フォーム ======================== -->
+                <form action="#" method="post" class="p-form">
+                    <div class="p-form__area">
+                        <label for="name" class="p-form__label p-form__label--req">お名前</label>
+                        <input type="text" name="name" id="name" required autofocus />
+                    </div>
+                    <div class="p-form__area">
+                        <label for="tel" class="p-form__label p-form__label--req">電話番号</label>
+                        <input type="tel" name="tel" id="tel" required />
+                    </div>
+                    <div class="p-form__area">
+                        <label for="mail" class="p-form__label p-form__label--optional">メールアドレス</label>
+                        <input type="email" name="mail" id="mail" required />
+                    </div>
+                    <div class="p-form__area">
+                        <label for="date" class="p-form__label p-form__label--req">利用希望日時</label>
+                        <!-- <input type="date" name="date" id="date" required placeholder="tes" /> -->
+                        <input type="text" id="datepicker" />
+                    </div>
+                    <div class="p-form__area">
+                        <fieldset>
+                            <legend><span class="p-form__label p-form__label--req">スタジオ</span></legend>
+                            <!-- <label for="studio" class="p-form__label p-form__label--req">スタジオ</label> -->
+                            <div class="p-form__radios">
+                                <label><input type="radio" name="studio" value="studioA" required /><span>StudioA</span></label>
+                                <label><input type="radio" name="studio" value="studioB" tabindex="0" /><span>StudioB</span></label>
+                                <label><input type="radio" name="studio" value="studioC" /><span>StudioC</span></label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="c-btn c-btn--rev">予約する</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- *フッター================== -->
+        <footer class="l-footer">©Mellow Sound Studio</footer>
+
+        <!-- Import JS -->
+
+        <script src="node_modules/splitting/dist/splitting.min.js"></script>
+        <script src="node_modules/@chenfengyuan/datepicker/dist/datepicker.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

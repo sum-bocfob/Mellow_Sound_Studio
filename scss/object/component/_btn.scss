@@ -11,34 +11,52 @@
     background-color: $c_bg_black;
     transition-duration: $dur_def;
 
-    &::before,
-    &::after {
-        content: "";
-        display: block;
-        height: 1px;
-        background-color: $c_font_white;
-        position: absolute;
-        top: 50%;
-        transition-duration: $dur_def;
-    }
-    &::before {
-        width: 80px;
-        right: -40px;
-    }
-    &::after {
-        width: 15px;
-        right: -40px;
-        transform-origin: 100% 0;
-        rotate: 22deg;
-    }
-
-    &:hover {
+    &--rev {
         background-color: $c_font_white;
         color: $c_font_black;
+        @include setFont($fs_heading_sm_SP);
+        width: 75.80174927113703%;
 
+        @include media {
+            width: 260px;
+        }
+
+        &:hover {
+            background-color: $c_bg_black;
+            color: $c_font_white;
+        }
+    }
+
+    &--arrow {
         &::before,
         &::after {
-            translate: 5px 0;
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: $c_font_white;
+            position: absolute;
+            top: 50%;
+            transition-duration: $dur_def;
+        }
+        &::before {
+            width: 80px;
+            right: -40px;
+        }
+        &::after {
+            width: 15px;
+            right: -40px;
+            transform-origin: 100% 0;
+            rotate: 22deg;
+        }
+
+        &:hover {
+            background-color: $c_font_white;
+            color: $c_font_black;
+
+            &::before,
+            &::after {
+                translate: 5px 0;
+            }
         }
     }
 }

@@ -412,6 +412,18 @@ dt {
   font-weight: normal;
 }
 
+input {
+  background-color: #424242;
+  height: 32px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+fieldset,
+legend {
+  display: contents;
+}
+
 .l-header {
   padding: 16px;
   display: flex;
@@ -601,6 +613,7 @@ dt {
   padding: 48px 16px;
   font-size: 0.75rem;
   line-height: 1;
+  background-color: #323232;
 }
 
 .c-headingL {
@@ -874,7 +887,23 @@ dt {
   background-color: #212121;
   transition-duration: 0.3s;
 }
-.c-btn::before, .c-btn::after {
+.c-btn--rev {
+  background-color: #f4f4f4;
+  color: #111111;
+  line-height: 1;
+  font-weight: bold;
+  width: 75.8017492711%;
+}
+@media screen and (width > 768px) {
+  .c-btn--rev {
+    width: 260px;
+  }
+}
+.c-btn--rev:hover {
+  background-color: #212121;
+  color: #f4f4f4;
+}
+.c-btn--arrow::before, .c-btn--arrow::after {
   content: "";
   display: block;
   height: 1px;
@@ -883,21 +912,21 @@ dt {
   top: 50%;
   transition-duration: 0.3s;
 }
-.c-btn::before {
+.c-btn--arrow::before {
   width: 80px;
   right: -40px;
 }
-.c-btn::after {
+.c-btn--arrow::after {
   width: 15px;
   right: -40px;
   transform-origin: 100% 0;
   rotate: 22deg;
 }
-.c-btn:hover {
+.c-btn--arrow:hover {
   background-color: #f4f4f4;
   color: #111111;
 }
-.c-btn:hover::before, .c-btn:hover::after {
+.c-btn--arrow:hover::before, .c-btn--arrow:hover::after {
   translate: 5px 0;
 }
 
@@ -1141,6 +1170,81 @@ dt {
   .top .p-info__text--PCCenter {
     text-align: center;
   }
+}
+
+.booking {
+  background-color: #212121;
+}
+.booking .p-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 76px;
+}
+.booking .p-booking__title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Karantina", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  letter-spacing: 0.05em;
+}
+.booking .p-booking__sub {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.booking .p-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 0;
+}
+.booking .p-form__area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.booking .p-form__label {
+  line-height: 1;
+  font-weight: bold;
+}
+.booking .p-form__label--req::after {
+  content: "*必須";
+  color: #f45959;
+  margin-left: 8px;
+}
+.booking .p-form__label--optional::after {
+  content: "任意";
+  color: #9a9a9a;
+  margin-left: 8px;
+}
+.booking .p-form #date::before {
+  content: attr(placeholder);
+}
+.booking .p-form__radios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: 100%;
+}
+.booking .p-form__radios label span {
+  background-color: #424242;
+  height: 32px;
+  display: grid;
+  place-content: center;
+  line-height: 1;
+  font-weight: bold;
+  color: #111111;
+}
+.booking .p-form__radios input {
+  opacity: 0;
+  position: absolute;
+}
+.booking .p-form__radios input:focus + span {
+  outline: 3px solid #f4f4f4;
+}
+.booking .p-form__radios input:checked + span {
+  background-color: #f4f4f4;
 }
 
 .u-upper-case {

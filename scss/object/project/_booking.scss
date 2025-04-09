@@ -1,0 +1,81 @@
+@use "../../global" as *;
+
+.booking {
+    background-color: $c_bg_black;
+    .p-booking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 76px;
+
+        &__title {
+            @include setFont($fs_section_title_SP);
+        }
+
+        &__sub {
+            @include setFont($fs_small);
+        }
+    }
+
+    .p-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 0;
+
+        &__area {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__label {
+            @include setFont($fs_heading_sm_SP);
+
+            &--req::after {
+                content: "*必須";
+                color: $c_font_alert;
+                margin-left: 8px;
+            }
+
+            &--optional::after {
+                content: "任意";
+                color: $c_line_gray;
+                margin-left: 8px;
+            }
+        }
+
+        #date::before {
+            content: attr(placeholder);
+        }
+
+        &__radios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            width: 100%;
+            label span {
+                background-color: $c_bg_gray_form;
+                height: 32px;
+                display: grid;
+                place-content: center;
+                @include setFont($fs_heading_sm_SP);
+                color: $c_font_black;
+            }
+
+            input {
+                opacity: 0;
+                position: absolute;
+
+                &:focus + span {
+                    outline: 3px solid $c_font_white;
+                }
+
+                &:checked + span {
+                    background-color: $c_font_white;
+                }
+            }
+        }
+    }
+}

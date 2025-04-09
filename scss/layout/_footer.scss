@@ -5,4 +5,5 @@
     place-content: center;
     padding: 48px 16px;
     @include setFont($fs_small);
+    background-color: $c_bg_gray;
 }

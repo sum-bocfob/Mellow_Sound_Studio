@@ -1,14 +1,3 @@
-// scrollBoost
-if (window.matchMedia("(width > 768px)").matches) {
-    document.querySelectorAll(".c-accordion__scroll").forEach((item) => {
-        new ScrollBooster({
-            viewport: item,
-            scrollMode: "transform",
-            direction: "horizontal",
-        });
-    });
-}
-
 // Splitting
 const targets = document.querySelectorAll(".split-target");
 targets.forEach((target) => {
@@ -42,29 +31,47 @@ $(function () {
         $("html, body").animate({
             scrollTop: pos,
         });
+        gnav.removeClass("js-open");
     });
+
+    // datepicker
+    $("#datepicker").datepicker();
 });
 
-// *Swiper
-const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    loop: true,
+// トップページのみ
+if (window.location.pathname.endsWith("index.html")) {
+    // *Swiper
+    const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
-    },
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+        },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
-// swiper キャプション変更
-const caption = document.querySelector(".c-swiper__caption");
-swiper.on("slideChangeTransitionEnd", function () {
-    console.log("tes");
-    caption.textContent = document.querySelector(".swiper-slide-active").dataset.caption;
-});
+    // swiper キャプション変更
+    const caption = document.querySelector(".c-swiper__caption");
+    swiper.on("slideChangeTransitionEnd", function () {
+        console.log("tes");
+        caption.textContent = document.querySelector(".swiper-slide-active").dataset.caption;
+    });
+
+    // scrollBoost
+    if (window.matchMedia("(width > 768px)").matches) {
+        document.querySelectorAll(".c-accordion__scroll").forEach((item) => {
+            new ScrollBooster({
+                viewport: item,
+                scrollMode: "transform",
+                direction: "horizontal",
+            });
+        });
+    }
+}

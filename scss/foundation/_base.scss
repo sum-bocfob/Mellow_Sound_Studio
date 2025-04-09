@@ -22,3 +22,15 @@ img {
 dt {
     font-weight: normal;
 }
+
+input {
+    background-color: $c_bg_gray_form;
+    height: 32px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+fieldset,
+legend {
+    display: contents;
+}

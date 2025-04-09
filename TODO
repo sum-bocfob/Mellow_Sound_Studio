@@ -13,9 +13,10 @@ Todo:
     ✔ footer @done(25-04-09 14:29)
     ✔ container pad16 max1120 @done(25-04-09 14:29)
     ✔ id @done(25-04-09 14:29)
-    ☐ スムーズスクロール
-    ☐ gnav閉じる
+    ✔ スムーズスクロール @done(25-04-09 14:54)
+    ✔ gnav閉じる @done(25-04-09 14:55)
     ☐ 予約ページ
+    ☐ autofocus効かない
 
   project:
 
