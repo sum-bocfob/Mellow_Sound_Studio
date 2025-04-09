@@ -1,0 +1,44 @@
+@use "../../global" as *;
+
+.c-btn {
+    border: 1px solid $c_font_white;
+    display: grid;
+    place-content: center;
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 24px;
+    position: relative;
+    background-color: $c_bg_black;
+    transition-duration: $dur_def;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $c_font_white;
+        position: absolute;
+        top: 50%;
+        transition-duration: $dur_def;
+    }
+    &::before {
+        width: 80px;
+        right: -40px;
+    }
+    &::after {
+        width: 15px;
+        right: -40px;
+        transform-origin: 100% 0;
+        rotate: 22deg;
+    }
+
+    &:hover {
+        background-color: $c_font_white;
+        color: $c_font_black;
+
+        &::before,
+        &::after {
+            translate: 5px 0;
+        }
+    }
+}

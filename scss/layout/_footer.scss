@@ -1,0 +1,8 @@
+@use "../global" as *;
+
+.l-footer {
+    display: grid;
+    place-content: center;
+    padding: 48px 16px;
+    @include setFont($fs_small);
+}

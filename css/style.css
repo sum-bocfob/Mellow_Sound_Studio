@@ -385,6 +385,7 @@ body {
   font-feature-settings: "palt";
   color: #f4f4f4;
   background-color: #323232;
+  overflow-x: hidden;
 }
 
 a {
@@ -565,6 +566,14 @@ dt {
   max-width: 1152px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+.l-footer {
+  display: grid;
+  place-content: center;
+  padding: 48px 16px;
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
 .c-headingL {
@@ -786,6 +795,44 @@ dt {
   content: "\e51c";
 }
 
+.c-btn {
+  border: 1px solid #f4f4f4;
+  display: grid;
+  place-content: center;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 24px;
+  position: relative;
+  background-color: #212121;
+  transition-duration: 0.3s;
+}
+.c-btn::before, .c-btn::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #f4f4f4;
+  position: absolute;
+  top: 50%;
+  transition-duration: 0.3s;
+}
+.c-btn::before {
+  width: 80px;
+  right: -40px;
+}
+.c-btn::after {
+  width: 15px;
+  right: -40px;
+  transform-origin: 100% 0;
+  rotate: 22deg;
+}
+.c-btn:hover {
+  background-color: #f4f4f4;
+  color: #111111;
+}
+.c-btn:hover::before, .c-btn:hover::after {
+  translate: 5px 0;
+}
+
 .top .p-hero {
   background-image: url("../img/studio_SP.jpg");
   background-position: center bottom;
@@ -852,6 +899,10 @@ dt {
 }
 .top .p-about__text {
   margin-top: 24px;
+}
+
+.top .p-equipments {
+  background-color: #212121;
 }
 
 .top .p-plan__plan-list {
@@ -968,6 +1019,40 @@ dt {
   text-align: center;
 }
 
+.top .p-access {
+  background-color: #212121;
+}
+.top .p-access__map {
+  width: 100%;
+  aspect-ratio: 375/300;
+  margin-top: 32px;
+}
+.top .p-access__map iframe {
+  width: 100%;
+  height: 100%;
+}
+.top .p-info {
+  padding: 32px 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.top .p-info__item {
+  width: 100%;
+}
+.top .p-info__title {
+  display: block;
+  width: 100%;
+  line-height: 1;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 8px;
+  text-align: center;
+}
+.top .p-info__text {
+  margin-top: 8px;
+}
+
 .u-upper-case {
   text-transform: uppercase;
 }
@@ -979,6 +1064,17 @@ dt {
   .u-block-onlySP {
     display: inline;
   }
+}
+
+@media screen and (width > 768px) {
+  .u-block-onlyPC {
+    display: block;
+  }
+}
+
+.u-adjust-char-pos {
+  display: inline-block;
+  translate: 0 -0.05em;
 }
 
 .u-ml8 {

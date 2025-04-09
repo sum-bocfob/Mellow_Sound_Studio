@@ -10,3 +10,12 @@
         display: inline;
     }
 }
+.u-block-onlyPC {
+    @include media {
+        display: block;
+    }
+}
+.u-adjust-char-pos {
+    display: inline-block;
+    translate: 0 -0.05em;
+}
