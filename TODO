@@ -3,10 +3,11 @@ Sass
 Swiper
 Splitting
 ScrollBooster
+datepicker
 
 
 Todo:
-  ☐ favicon
+  ✔ favicon @done(25-04-10 10:34)
 
   layout:
     ✔ header 背景ぼかし @done(25-04-09 14:29)
@@ -15,8 +16,8 @@ Todo:
     ✔ id @done(25-04-09 14:29)
     ✔ スムーズスクロール @done(25-04-09 14:54)
     ✔ gnav閉じる @done(25-04-09 14:55)
-    ☐ 予約ページ
-    ☐ autofocus効かない
+    ✔ 予約ページ @done(25-04-10 10:13)
+    ✘ autofocus効かない @cancelled(25-04-10 10:13)
 
   project:
 

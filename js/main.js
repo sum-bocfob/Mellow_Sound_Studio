@@ -15,12 +15,14 @@ $(function () {
 
     // *アコーディオン
     const accordion_title = $(".c-accordion__title");
-    if (window.matchMedia("(width <= 768px)").matches) {
-        accordion_title.not(".js-accordion-open").next(".c-accordion__scroll").hide();
-        accordion_title.on("click", function () {
-            $(this).toggleClass("js-accordion-open");
-            $(this).next(".c-accordion__scroll").slideToggle();
-        });
+    if (accordion_title.length) {
+        if (window.matchMedia("(width <= 768px)").matches) {
+            accordion_title.not(".js-accordion-open").next(".c-accordion__scroll").hide();
+            accordion_title.on("click", function () {
+                $(this).toggleClass("js-accordion-open");
+                $(this).next(".c-accordion__scroll").slideToggle();
+            });
+        }
     }
 
     // ページ内リンク　スムーズスクロール
@@ -35,7 +37,20 @@ $(function () {
     });
 
     // datepicker
-    $("#datepicker").datepicker();
+    const datepickerElm = $("#datepicker");
+    if (datepickerElm.length) {
+        datepickerElm
+            .datepicker({
+                minDate: new Date(),
+                dateFormat: "yy/mm/dd (D)",
+            })
+            .focusin(function (e) {
+                $(this).attr("readonly", "true");
+            })
+            .focusout(function (e) {
+                $(this).removeAttr("readonly");
+            });
+    }
 });
 
 // トップページのみ
@@ -60,7 +75,6 @@ if (window.location.pathname.endsWith("index.html")) {
     // swiper キャプション変更
     const caption = document.querySelector(".c-swiper__caption");
     swiper.on("slideChangeTransitionEnd", function () {
-        console.log("tes");
         caption.textContent = document.querySelector(".swiper-slide-active").dataset.caption;
     });
 

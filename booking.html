@@ -10,9 +10,7 @@
         <!-- 本サイトのURL(絶対パス)を記載(分散ページのSEO対策) -->
         <link rel="canonical" href="#" />
         <!-- ファビコン -->
-        <link rel="icon" href="#" sizes="32x32" />
-        <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml" /> -->
-        <link rel="apple-touch-icon" href="#" />
+        <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
 
         <!-- OGP -->
         <meta property="og:type" content="website" />
@@ -31,15 +29,13 @@
         <!-- Import CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
         <link rel="stylesheet" href="node_modules/splitting/dist/splitting.css" />
-        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css" /> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/vader/jquery-ui.min.css" /> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui-themes-1.14.1/themes/vader/jquery-ui.min.css" />
         <link rel="stylesheet" href="css/style.css" />
 
         <!-- Import JS/jQuery Library -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <!-- <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script src="js/datepicker-ja.js"></script>
     </head>
     <body class="booking">
         <!-- *ヘッダー================== -->
@@ -77,44 +73,47 @@
         </header>
 
         <main class="main">
-            <div class="l-containerL">
-                <hgroup class="p-booking">
-                    <h2 class="p-booking__title u-upper-case">Booking</h2>
-                    <p class="p-booking__sub">予約</p>
-                </hgroup>
-                <!-- * フォーム ======================== -->
-                <form action="#" method="post" class="p-form">
-                    <div class="p-form__area">
-                        <label for="name" class="p-form__label p-form__label--req">お名前</label>
-                        <input type="text" name="name" id="name" required autofocus />
-                    </div>
-                    <div class="p-form__area">
-                        <label for="tel" class="p-form__label p-form__label--req">電話番号</label>
-                        <input type="tel" name="tel" id="tel" required />
-                    </div>
-                    <div class="p-form__area">
-                        <label for="mail" class="p-form__label p-form__label--optional">メールアドレス</label>
-                        <input type="email" name="mail" id="mail" required />
-                    </div>
-                    <div class="p-form__area">
-                        <label for="date" class="p-form__label p-form__label--req">利用希望日時</label>
-                        <!-- <input type="date" name="date" id="date" required placeholder="tes" /> -->
-                        <input type="text" id="datepicker" />
-                    </div>
-                    <div class="p-form__area">
-                        <fieldset>
-                            <legend><span class="p-form__label p-form__label--req">スタジオ</span></legend>
-                            <!-- <label for="studio" class="p-form__label p-form__label--req">スタジオ</label> -->
-                            <div class="p-form__radios">
-                                <label><input type="radio" name="studio" value="studioA" required /><span>StudioA</span></label>
-                                <label><input type="radio" name="studio" value="studioB" tabindex="0" /><span>StudioB</span></label>
-                                <label><input type="radio" name="studio" value="studioC" /><span>StudioC</span></label>
+            <section class="section p-booking">
+                <div class="l-containerL">
+                    <hgroup class="p-booking__heading">
+                        <h2 class="p-booking__title u-upper-case">Booking</h2>
+                        <p class="p-booking__sub">予約</p>
+                    </hgroup>
+                    <!-- * フォーム ======================== -->
+                    <form action="#" method="post" class="p-form" id="form">
+                        <div class="p-form__area">
+                            <label for="name" class="p-form__label p-form__label--req">お名前</label>
+                            <input type="text" name="name" id="name" class="p-form__input" required autofocus />
+                        </div>
+                        <div class="p-form__area">
+                            <label for="tel" class="p-form__label p-form__label--req">電話番号</label>
+                            <input type="tel" name="tel" id="tel" class="p-form__input" required />
+                        </div>
+                        <div class="p-form__area">
+                            <label for="mail" class="p-form__label p-form__label--optional">メールアドレス</label>
+                            <input type="email" name="mail" id="mail" class="p-form__input" />
+                        </div>
+                        <div class="p-form__area">
+                            <label for="date" class="p-form__label p-form__label--req">利用希望日時</label>
+                            <div class="p-form__datepicker-wrapper">
+                                <input type="text" id="datepicker" class="p-form__datepicker p-form__input" required />
                             </div>
-                        </fieldset>
-                    </div>
-                    <button type="submit" class="c-btn c-btn--rev">予約する</button>
-                </form>
-            </div>
+                        </div>
+                        <div class="p-form__area">
+                            <fieldset>
+                                <legend><span class="p-form__label p-form__label--req">スタジオ</span></legend>
+                                <div class="p-form__radios">
+                                    <label><input type="radio" name="studio" value="studioA" required /><span>StudioA</span></label>
+                                    <label><input type="radio" name="studio" value="studioB" tabindex="0" /><span>StudioB</span></label>
+                                    <label><input type="radio" name="studio" value="studioC" /><span>StudioC</span></label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                    <button type="submit" class="c-btn c-btn--rev" form="form">予約する</button>
+                </div>
+                <!-- /.l-containerL -->
+            </section>
         </main>
 
         <!-- *フッター================== -->

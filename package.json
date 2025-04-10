@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@chenfengyuan/datepicker": "^1.0.10",
     "scrollbooster": "^3.0.2"
   },
   "devDependencies": {

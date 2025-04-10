@@ -1175,12 +1175,12 @@ legend {
 .booking {
   background-color: #212121;
 }
-.booking .p-booking {
+.booking .p-booking__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 76px;
+  padding-top: 44px;
 }
 .booking .p-booking__title {
   font-size: 3rem;
@@ -1204,9 +1204,22 @@ legend {
   flex-direction: column;
   gap: 8px;
 }
+@media screen and (width > 768px) {
+  .booking .p-form__area {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
 .booking .p-form__label {
   line-height: 1;
   font-weight: bold;
+}
+@media screen and (width > 768px) {
+  .booking .p-form__label {
+    width: 15%;
+  }
 }
 .booking .p-form__label--req::after {
   content: "*必須";
@@ -1218,14 +1231,45 @@ legend {
   color: #9a9a9a;
   margin-left: 8px;
 }
-.booking .p-form #date::before {
-  content: attr(placeholder);
+@media screen and (width > 768px) {
+  .booking .p-form__input {
+    flex-shrink: 0;
+    width: 85%;
+  }
+}
+.booking .p-form__datepicker-wrapper {
+  position: relative;
+}
+@media screen and (width > 768px) {
+  .booking .p-form__datepicker-wrapper {
+    width: 85%;
+    flex-shrink: 0;
+  }
+}
+.booking .p-form__datepicker-wrapper::after {
+  content: "\ebcc";
+  font-family: "Material Icons";
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  display: block;
+  position: absolute;
+  top: -0.1em;
+  right: 0.5em;
+  pointer-events: none;
+}
+.booking .p-form__datepicker {
+  width: 100%;
 }
 .booking .p-form__radios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
   width: 100%;
+}
+@media screen and (width > 768px) {
+  .booking .p-form__radios {
+    width: 85%;
+  }
 }
 .booking .p-form__radios label span {
   background-color: #424242;
@@ -1241,7 +1285,8 @@ legend {
   position: absolute;
 }
 .booking .p-form__radios input:focus + span {
-  outline: 3px solid #f4f4f4;
+  outline: auto;
+  outline: auto -webkit-focus-ring-color; /* for Chrome */
 }
 .booking .p-form__radios input:checked + span {
   background-color: #f4f4f4;
