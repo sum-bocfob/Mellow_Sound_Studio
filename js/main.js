@@ -52,7 +52,6 @@ $(function () {
             });
     }
 });
-console.log("0tes");
 
 // トップページのみ
 if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
