@@ -54,7 +54,7 @@ $(function () {
 });
 
 // トップページのみ
-if (window.location.pathname.endsWith("index.html")) {
+if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
     // *Swiper
     const swiper = new Swiper(".swiper", {
         // Optional parameters
