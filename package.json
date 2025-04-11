@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "scrollbooster": "^3.0.2"
-  },
-  "devDependencies": {
-    "splitting": "^1.1.0"
-  }
-}
