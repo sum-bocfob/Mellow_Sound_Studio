@@ -8,9 +8,16 @@ $(function () {
     // *ハンバーガーメニュー
     const hamburger = $(".l-header__hamburger");
     const gnav = $(".l-header__gnav");
+    const gnav_bg = $(".l-header__gnav_bg");
     hamburger.on("click", function () {
         $(this).toggleClass("js-open");
         gnav.toggleClass("js-open");
+        gnav_bg.toggleClass("js-open");
+    });
+    gnav_bg.on("click", function () {
+        $(this).removeClass("js-open");
+        gnav.removeClass("js-open");
+        hamburger.removeClass("js-open");
     });
 
     // *アコーディオン
